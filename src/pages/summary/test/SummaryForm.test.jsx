@@ -9,7 +9,7 @@ import userEvent from "@testing-library/user-event";
 test("Initial conditions", () => {
   render(<SummaryForm />);
   const checkbox = screen.getByRole("checkbox", {
-    name: /term and conditions/i,
+    name: /terms and conditions/i, //대소문자 구분없이 사용할때 i 사용
   });
   expect(checkbox).not.toBeChecked();
 
